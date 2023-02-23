@@ -1,0 +1,15 @@
+<div class="lifted raised round-element h-100">
+  <a href="{{link}}">
+    <div class="card hover-effect round-element text-center text-white h-100">
+      <img class="round-top-element" src="{{image}}" class="card-img-top" alt="{{title}}">
+      <div class="card-body">
+        {{#if header}}
+        <h3 class="card-title">{{title}}</h3>
+        <p class="card-text lead">{{subtitle}}</p>
+        {{else}}
+        <p class="card-title lead">{{title}}</p>
+        {{/if}}
+      </div>
+    </div>
+  </a>
+</div>
