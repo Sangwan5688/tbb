@@ -4,10 +4,10 @@ export const blogs = [{
   image: 'assets/iphone.jpg',
   link: 'blogs/install_ipa_on_iphone.html',
 }, {
-  title: 'Coming Soon',
-  subtitle: 'Coming Soon',
-  image: 'assets/home_header_laptop.jpg',
-  link: '#',
+  title: 'Arm64 vs Armeabi',
+  subtitle: 'Understanding Which App to Download for Your Device',
+  image: 'assets/arch_version.png',
+  link: 'blogs/arm64_vs_armeabi.html',
 }, {
   title: 'Coming Soon',
   subtitle: 'Coming Soon',
