@@ -8,35 +8,36 @@
   <title>Beyond Boundaries</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link href="styles/bootstrap.min.css" rel="stylesheet">
-  <link href="styles/main.css" rel="stylesheet">
+  <link href="/styles/bootstrap.min.css" rel="stylesheet">
+  <link href="/styles/main.css" rel="stylesheet">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9441129050034617" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="body">
+
   <header class="header">
     <nav class="navbar navbar-expand-lg navbar-dark bg-body-tertiary sticky-top">
       <div class="container-fluid">
-        <a class="navbar-brand mx-2 invert-effect" href="#">
+        <a class="navbar-brand mx-2 invert-effect" href="/">
           <img src="assets/tbb.png" alt="TBB">
         </a>
-        <!-- <a class="navbar-brand" href="#">TBB</a> -->
+        <!-- <a class="navbar-brand" href="/">TBB</a> -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" data-bs-theme="dark" id="navbarNav">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Blogs</a>
+              <a class="nav-link" href="/blogs">Blogs</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
+              <a class="nav-link" href="/contact">Contact Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About Me</a>
+              <a class="nav-link" href="/about">About Me</a>
             </li>
           </ul>
           <form class="d-flex me-5" role="search">
@@ -47,6 +48,7 @@
       </div>
     </nav>
   </header>
+
   <div class="header-section text-center text-white">
     <div class="container">
       <div class="row">
@@ -92,9 +94,9 @@
     </div>
   </footer>
 
-  <script src="scripts/bootstrap.min.js"></script>
-  <script src="scripts/handlebars-4.7.7.min.js"></script>
-  <script src="templates/card.html"></script>
+  <script src="/scripts/bootstrap.min.js"></script>
+  <script src="/scripts/handlebars-4.7.7.min.js"></script>
+  <script src="/templates/card.html"></script>
   <script type="module" src="scripts/main.js"></script>
 </body>
 

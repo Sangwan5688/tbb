@@ -9,37 +9,30 @@ export const blogs = [{
   image: 'assets/arch_version.png',
   link: 'blogs/arm64_vs_armeabi',
 }, {
-  title: 'Coming Soon',
   subtitle: 'Coming Soon',
   image: 'assets/home_header_laptop.jpg',
   link: '#',
 }, {
-  title: 'Coming Soon',
   subtitle: 'Coming Soon',
   image: 'assets/home_header_laptop.jpg',
   link: '#',
 }, {
-  title: 'Coming Soon',
   subtitle: 'Coming Soon',
   image: 'assets/home_header_laptop.jpg',
   link: '#',
 }, {
-  title: 'Coming Soon',
   subtitle: 'Coming Soon',
   image: 'assets/home_header_laptop.jpg',
   link: '#',
 }, {
-  title: 'Coming Soon',
   subtitle: 'Coming Soon',
   image: 'assets/home_header_laptop.jpg',
   link: '#',
 }, {
-  title: 'Coming Soon',
   subtitle: 'Coming Soon',
   image: 'assets/home_header_laptop.jpg',
   link: '#',
 }, {
-  title: 'Coming Soon',
   subtitle: 'Coming Soon',
   image: 'assets/home_header_laptop.jpg',
   link: '#',

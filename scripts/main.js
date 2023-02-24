@@ -1,6 +1,5 @@
-import { blogs } from "../data/blogs.js";
-
-const showAd = false;
+import { blogs } from "/data/blogs.js";
+import { showAd } from "/constants/constants.js";
 
 fetch('templates/card.html')
   .then(response => response.text())
