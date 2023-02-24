@@ -6,7 +6,7 @@ fetch('/templates/main.html')
   .then(response => response.text())
   .then(html => {
     const template = Handlebars.compile(html);
-    fetch('./index.html')
+    fetch('/templates/blog.html')
       .then(response => response.text())
       .then(body => {
         const data = {
@@ -14,8 +14,16 @@ fetch('/templates/main.html')
         };
         const compiledTemplate = template(data);
 
-        const recentPostsLarge = document.getElementById('body-load');
-        recentPostsLarge.innerHTML = compiledTemplate;
+        const finalTemplate = Handlebars.compile(compiledTemplate);
+        fetch('body.html').then(response => response.text()).then(blog => {
+          const data = {
+            blog_content: blog,
+          };
+          const finalCompiledTemplate = finalTemplate(data);
+
+          const recentPostsLarge = document.getElementById('body-load');
+          recentPostsLarge.innerHTML = finalCompiledTemplate;
+        });
       });
 
   });
