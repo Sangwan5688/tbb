@@ -2,6 +2,7 @@ a {
   text-decoration: none;
 }
 
+.header,
 .header-section {
   background-color: #000000!important;
 }
@@ -67,4 +68,8 @@ a {
 
 .subtitle {
   color: rgba(255, 255, 255, 0.7);
+}
+
+.invert-effect {
+  filter: invert(100%);
 }
