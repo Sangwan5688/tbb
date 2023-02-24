@@ -1,7 +1,7 @@
 import { blogs, recentPosts } from "/data/blogs_data.js";
 import { showAd } from "/constants/constants.js";
 
-fetch('templates/card.html')
+fetch('/templates/card.html')
   .then(response => response.text())
   .then(html => {
     const template = Handlebars.compile(html);
