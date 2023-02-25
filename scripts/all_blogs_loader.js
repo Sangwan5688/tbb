@@ -1,7 +1,7 @@
 import { blogs } from "/data/blogs_data.js";
 import { showAd } from "/constants/constants.js";
 
-function loadPosts() {
+function loadPosts(filter) {
   fetch('/templates/card.html')
     .then(response => response.text())
     .then(html => {
