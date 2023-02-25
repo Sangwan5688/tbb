@@ -10,6 +10,7 @@
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link href="/styles/bootstrap.min.css" rel="stylesheet">
   <link href="/styles/main.css" rel="stylesheet">
+  <script src="/scripts/body_loader.js"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9441129050034617" crossorigin="anonymous"></script>
 </head>
 
@@ -20,7 +21,14 @@
 
   <script src="/scripts/bootstrap.min.js"></script>
   <script src="/scripts/handlebars-4.7.7.min.js"></script>
-  <script type="module" src="/scripts/contact_load.js"></script>
+  <script>
+    let data = {
+      title: 'Contact Us',
+      subtitle: 'Want to share something with us?',
+      image: '/assets/contact-banner.jpg',
+    };
+    loadBody(data);
+  </script>
 </body>
 
 </html>

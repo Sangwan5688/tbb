@@ -78,3 +78,9 @@ a {
   -webkit-mask-image: -webkit-linear-gradient(bottom, transparent 0%, black 30%);
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
+
+.two-third-size {
+  height: 70%;
+  width: 70%;
+  object-fit: cover;
+}

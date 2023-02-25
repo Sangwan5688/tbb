@@ -1,4 +1,4 @@
-import { blogs, recentPosts } from "/data/blogs_data.js";
+import { blogs } from "/data/blogs_data.js";
 import { showAd } from "/constants/constants.js";
 
 function loadPosts() {
@@ -6,21 +6,23 @@ function loadPosts() {
     .then(response => response.text())
     .then(html => {
       const template = Handlebars.compile(html);
-      for (let i = 0; i < Math.min(recentPosts.length, 11); i++) {
+      let i = 0;
+      for (const [key, value] of Object.entries(blogs)) {
+        console.log(key);
         if (i === 0) {
-          blogs[recentPosts[i]].header = true;
+          value.header = true;
         }
         if ((i === 5 || i === 7) && showAd) {
           // Will be used to load ad
-          const recentPosts = document.getElementById('recent-posts-section');
+          const recentPosts = document.getElementById('posts-section');
           recentPosts.innerHTML += `<div class="col-lg-3 col-6 mb-4">
-        <div class="card round-element text-center h-100">
-        <div class="card-body">
-        </div>
-        </div>
-      </div>`;
+            <div class="card round-element text-center h-100">
+              <div class="card-body">
+              </div>
+            </div>
+          </div>`;
         }
-        const compiledTemplate = template(blogs[recentPosts[i]]);
+        const compiledTemplate = template(value);
         if (i === 0) {
           const recentPostsLarge = document.getElementById('recent-posts-large');
           recentPostsLarge.innerHTML = compiledTemplate;
@@ -31,20 +33,11 @@ function loadPosts() {
           const recentPosts = document.getElementById('recent-posts-section');
           recentPosts.innerHTML += `<div class="col-lg-3 col-6 mb-4">${compiledTemplate}</div>`;
         }
+        i += 1;
       };
     });
 }
 
-function scrollToSection(sectionId) {
-  var section = document.getElementById(sectionId);
-  section.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-}
-
-
 window.onload = function() {
   loadPosts();
-  let scrollToSectionBtn = document.getElementById("scroll-to-section-btn");
-  scrollToSectionBtn.addEventListener("click", function() {
-    scrollToSection("recent-posts");
-  });
 }
