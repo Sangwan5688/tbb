@@ -1,13 +1,13 @@
 export const blogs = {
   install_ipa_on_iphone: {
-    title: 'Install IPA on iPhone',
+    title: 'How to install IPA on iPhone',
     subtitle: 'A Guide Without Jailbreaking',
     image: '/assets/iphone.jpg',
     link: '/blogs/install_ipa_on_iphone',
     related: [{ key: 'arm64_vs_armeabi' }],
   },
   arm64_vs_armeabi: {
-    title: 'Arm64 vs Armeabi',
+    title: 'What\'s the difference between Arm64 & Armeabi',
     subtitle: 'Understanding Which App to Download for Your Device',
     image: '/assets/arch_version.png',
     link: '/blogs/arm64_vs_armeabi',
