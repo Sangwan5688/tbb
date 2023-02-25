@@ -8,7 +8,6 @@ function loadPosts() {
       const template = Handlebars.compile(html);
       let i = 0;
       for (const [key, value] of Object.entries(blogs)) {
-        console.log(key);
         if (i === 0) {
           value.header = true;
         }

@@ -40,9 +40,20 @@ function scrollToSection(sectionId) {
   section.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
 }
 
+function makeSearch() {
+  const form = document.getElementById('searchForm');
+  form.addEventListener('submit', function(e) {
+    const searchText = document.getElementById('searchInput').value;
+    console.log(searchText);
+    // let searchResults = Object.entries(blogs).filter(([k, v]) => k.toLowerCase().includes(searchText.toLowerCase()));
+    // console.log(searchResults);
+  });
+}
+
 
 window.onload = function() {
   loadPosts();
+  makeSearch();
   let scrollToSectionBtn = document.getElementById("scroll-to-section-btn");
   scrollToSectionBtn.addEventListener("click", function() {
     scrollToSection("recent-posts");
