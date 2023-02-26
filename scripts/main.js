@@ -14,11 +14,14 @@ function loadRecentPosts() {
           // Will be used to load ad
           const recentPosts = document.getElementById('recent-posts-section');
           recentPosts.innerHTML += `<div class="col-lg-3 col-6 mb-4">
-        <div class="card round-element text-center h-100">
-        <div class="card-body">
-        </div>
-        </div>
-      </div>`;
+            <div class="card round-element text-center h-100">
+              <div class="card-body text-white ">
+                <!-- Ezoic - related_blogs_section - mid_content -->
+                <div id="ezoic-pub-ad-placeholder-104"> </div>
+                <!-- End Ezoic - related_blogs_section - mid_content -->
+              </div>
+            </div>
+          </div>`;
         }
         const compiledTemplate = template(blogs[recentPosts[i]]);
         if (i === 0) {

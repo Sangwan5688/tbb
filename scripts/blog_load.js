@@ -1,4 +1,3 @@
-import { showAd } from "/constants/constants.js";
 import { blogs } from "/data/blogs_data.js";
 
 fetch('/templates/main_body.html')
