@@ -1,0 +1,114 @@
+<p class="lead">Torrent files are a popular way to share large files online. However, downloading them can be a hassle, especially if you don't have a good internet connection or a lot of storage space on your computer. Fortunately, there is a way to download torrent
+  files directly to your Google Drive account without downloading them yourself, so you can access them from anywhere, without using your internet and also free up space on your hard drive.</p>
+<p class="lead">Using a Google Colab script, you can easily download torrent files directly to your Google Drive account without needing to use a third-party cloud torrent service. Here's how to do it:</p>
+
+<h2 class="display-6 mt-4">Step 1: Open Google Colab</h2>
+<p class="lead">First, open <a href="https://colab.research.google.com/">Google Colab</a> in your web browser. Google Colab is a cloud-based service that allows you to write and run Python code in a Jupyter Notebook-style interface.</p>
+
+<h2 class="display-6 mt-4">Step 2: Create a New Notebook</h2>
+<p class="lead">Next, create a new Colab notebook by clicking "New Notebook" and selecting "Python 3" as the runtime type.</p>
+
+<h2 class="display-6 mt-4">Step 3: Import the Necessary Libraries</h2>
+<p class="lead">In the first code cell of your notebook, import the necessary libraries for downloading and extracting the torrent file. This can be done with the following code:</p>
+<pre class="code-block-simple">
+!apt install python3-libtorrent
+
+import libtorrent as lt
+
+ses = lt.session()
+ses.listen_on(6881, 6891)
+downloads = []
+</pre>
+
+<h2 class="display-6 mt-4">Step 4: Connect to Your Google Drive Account</h2>
+<p class="lead">Next, connect to your Google Drive account by running the following code in a new cell:</p>
+<pre class="code-block-simple">
+from google.colab import drive
+drive.mount("/content/drive")
+</pre>
+<p class="lead">This will prompt you to authorize Google Colab to access your Google Drive account.</p>
+
+<h2 class="display-6 mt-4">Step 5: Add the Torrent File / Torrent Link</h2>
+<p class="lead">In the next cell of your notebook, add the torrent file using the following code:</p>
+<pre class="code-block-simple">
+from google.colab import files
+
+source = files.upload()
+params = {
+    "save_path": "/content/drive/My Drive/Torrent",
+    "ti": lt.torrent_info(list(source.keys())[0]),
+}
+downloads.append(ses.add_torrent(params))
+</pre>
+<p class="lead">Incase you have the torrent link, you can use the following code to add link directly:</p>
+<pre class="code-block-simple">
+params = {"save_path": "/content/drive/My Drive/Torrent"}
+
+while True:
+    magnet_link = input("Enter Magnet Link Or Type Exit: ")
+    if magnet_link.lower() == "exit":
+        break
+    downloads.append(
+        lt.add_magnet_uri(ses, magnet_link, params)
+    )
+</pre>
+<p class="lead">Just type "exit" and hit enter once you are done entering all links.</p>
+
+<h2 class="display-6 mt-4">Step 7: Start the Download</h2>
+<p class="lead">Finally, start the download process by running the following code in a new cell:</p>
+<pre class="code-block-simple">
+import time
+from IPython.display import display
+import ipywidgets as widgets
+
+state_str = [
+    "queued",
+    "checking",
+    "downloading metadata",
+    "downloading",
+    "finished",
+    "seeding",
+    "allocating",
+    "checking fastresume",
+]
+
+layout = widgets.Layout(width="auto")
+style = {"description_width": "initial"}
+download_bars = [
+    widgets.FloatSlider(
+        step=0.01, disabled=True, layout=layout, style=style
+    )
+    for _ in downloads
+]
+display(*download_bars)
+
+while downloads:
+    next_shift = 0
+    for index, download in enumerate(downloads[:]):
+        bar = download_bars[index + next_shift]
+        if not download.is_seed():
+            s = download.status()
+
+            bar.description = " ".join(
+                [
+                    download.name(),
+                    str(s.download_rate / 1000),
+                    "kB/s",
+                    state_str[s.state],
+                ]
+            )
+            bar.value = s.progress * 100
+        else:
+            next_shift -= 1
+            ses.remove_torrent(download)
+            downloads.remove(download)
+            bar.close()
+            download_bars.remove(bar)
+            print(download.name(), "complete")
+    time.sleep(1)
+</pre>
+<p class="lead">This will start downloading the files contained within the torrent file to your Google Drive account.</p>
+
+<h2 class="diplay-6 mt-4">Conclusion</h2>
+<p class="lead">By following these steps, you can easily download torrent files directly to your Google Drive account using a Google Colab script. This can be a convenient way to download torrent without worring about your internet usage and free up space on your computer,
+  while still being able to access your files from anywhere, without needing to use a third-party cloud torrent service.</p>

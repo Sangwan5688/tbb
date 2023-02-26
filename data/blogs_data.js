@@ -25,10 +25,11 @@ export const blogs = {
   },
   'how-to-download-torrent-to-google-drive': {
     title: 'How to download Torrent directly to Google Drive',
-    subtitle: 'Coming Soon',
+    subtitle: 'Download torrent directly to Google Drive without downloading',
     image: '/assets/torrent_to_gdrive.webp',
-    link: '#',
+    link: '/blogs/how-to-download-torrent-to-google-drive',
     related: [],
+    tags: new Set(['torrent', 'google drive', 'download', 'guide']),
   },
   coming_soon: {
     subtitle: 'Coming Soon',
@@ -43,6 +44,5 @@ export const recentPosts = [
   'arm64_vs_armeabi',
   'getting-started-with-flutter',
   'how-to-download-torrent-to-google-drive',
-  'coming_soon',
   'coming_soon',
 ];
