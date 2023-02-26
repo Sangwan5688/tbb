@@ -6,6 +6,7 @@ export const blogs = {
     link: '/blogs/install_ipa_on_iphone',
     related: [{ key: 'arm64_vs_armeabi' }],
     tags: new Set(['mobile', 'ios', 'ipa', 'iphone', 'jailbreak', 'install', 'guide']),
+    publish_date: '2023-02-24',
   },
   arm64_vs_armeabi: {
     title: 'What\'s the difference between Arm64 & Armeabi',
@@ -14,6 +15,7 @@ export const blogs = {
     link: '/blogs/arm64_vs_armeabi',
     related: [{ key: 'install_ipa_on_iphone' }],
     tags: new Set(['mobile', 'android', 'arm64', 'armeabi', 'architecture']),
+    publish_date: '2023-02-25',
   },
   'getting-started-with-flutter': {
     title: 'Flutter App Development',
@@ -22,6 +24,7 @@ export const blogs = {
     link: '/blogs/getting-started-with-flutter',
     related: [],
     tags: new Set(['mobile', 'flutter', 'app', 'app development', 'install', 'guide']),
+    publish_date: '2023-02-26',
   },
   'how-to-download-torrent-to-google-drive': {
     title: 'How to download Torrent directly to Google Drive',
@@ -29,7 +32,8 @@ export const blogs = {
     image: '/assets/torrent_to_gdrive.webp',
     link: '/blogs/how-to-download-torrent-to-google-drive',
     related: [],
-    tags: new Set(['torrent', 'google drive', 'download', 'guide']),
+    tags: new Set(['torrent', 'google drive', 'download', 'python', 'script', 'guide']),
+    publish_date: '2023-02-26',
   },
   coming_soon: {
     subtitle: 'Coming Soon',
