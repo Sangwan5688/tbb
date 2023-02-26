@@ -24,11 +24,9 @@ function loadPosts(filter) {
         const compiledTemplate = template(value);
         if (i === 0) {
           let recentPostsLarge = document.getElementById('recent-posts-large');
-          while (recentPostsLarge === null) {
-            setTimeout(() => {}, 1);
-            recentPostsLarge = document.getElementById('recent-posts-large');
+          if (recentPostsLarge != null) {
+            recentPostsLarge.innerHTML = compiledTemplate;
           }
-          recentPostsLarge.innerHTML = compiledTemplate;
         } else if (i < 5) {
           const recentPostsSmall = document.getElementById('recent-posts-small');
           recentPostsSmall.innerHTML += `<div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-4">${compiledTemplate}</div>`;
