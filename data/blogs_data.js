@@ -23,6 +23,13 @@ export const blogs = {
     related: [],
     tags: new Set(['mobile', 'flutter', 'app', 'app development', 'install', 'guide']),
   },
+  'how-to-download-torrent-to-google-drive': {
+    title: 'How to download Torrent directly to Google Drive',
+    subtitle: 'Coming Soon',
+    image: '/assets/torrent_to_gdrive.webp',
+    link: '#',
+    related: [],
+  },
   coming_soon: {
     subtitle: 'Coming Soon',
     image: '/assets/home_header_laptop.webp',
@@ -35,10 +42,7 @@ export const recentPosts = [
   'install_ipa_on_iphone',
   'arm64_vs_armeabi',
   'getting-started-with-flutter',
-  'coming_soon',
-  'coming_soon',
-  'coming_soon',
-  'coming_soon',
+  'how-to-download-torrent-to-google-drive',
   'coming_soon',
   'coming_soon',
 ];
