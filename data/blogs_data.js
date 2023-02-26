@@ -5,6 +5,7 @@ export const blogs = {
     image: '/assets/iphone.webp',
     link: '/blogs/install_ipa_on_iphone',
     related: [{ key: 'arm64_vs_armeabi' }],
+    tags: new Set(['mobile', 'ios', 'ipa', 'iphone', 'jailbreak', 'install', 'guide']),
   },
   arm64_vs_armeabi: {
     title: 'What\'s the difference between Arm64 & Armeabi',
@@ -12,6 +13,15 @@ export const blogs = {
     image: '/assets/arch_version.webp',
     link: '/blogs/arm64_vs_armeabi',
     related: [{ key: 'install_ipa_on_iphone' }],
+    tags: new Set(['mobile', 'android', 'arm64', 'armeabi', 'architecture']),
+  },
+  'getting-started-with-flutter': {
+    title: 'Flutter App Development',
+    subtitle: 'Getting started with Flutter',
+    image: '/assets/flutter.webp',
+    link: '/blogs/getting-started-with-flutter',
+    related: [],
+    tags: new Set(['mobile', 'flutter', 'app', 'app development', 'install', 'guide']),
   },
   coming_soon: {
     subtitle: 'Coming Soon',
@@ -24,7 +34,7 @@ export const blogs = {
 export const recentPosts = [
   'install_ipa_on_iphone',
   'arm64_vs_armeabi',
-  'coming_soon',
+  'getting-started-with-flutter',
   'coming_soon',
   'coming_soon',
   'coming_soon',
