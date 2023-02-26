@@ -23,7 +23,11 @@ function loadPosts(filter) {
         }
         const compiledTemplate = template(value);
         if (i === 0) {
-          const recentPostsLarge = document.getElementById('recent-posts-large');
+          let recentPostsLarge = document.getElementById('recent-posts-large');
+          while (recentPostsLarge === null) {
+            setTimeout(arguments.callee, 1);
+            recentPostsLarge = document.getElementById('recent-posts-large');
+          }
           recentPostsLarge.innerHTML = compiledTemplate;
         } else if (i < 5) {
           const recentPostsSmall = document.getElementById('recent-posts-small');
