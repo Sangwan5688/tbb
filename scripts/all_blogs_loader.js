@@ -25,7 +25,7 @@ function loadPosts(filter) {
         if (i === 0) {
           let recentPostsLarge = document.getElementById('recent-posts-large');
           while (recentPostsLarge === null) {
-            setTimeout(arguments.callee, 1);
+            setTimeout(() => {}, 1);
             recentPostsLarge = document.getElementById('recent-posts-large');
           }
           recentPostsLarge.innerHTML = compiledTemplate;
