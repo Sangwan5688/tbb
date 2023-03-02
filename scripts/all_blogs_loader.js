@@ -1,12 +1,14 @@
 import { blogs } from "/data/blogs_data.js";
 import { showAd } from "/constants/constants.js";
 
-function loadPosts(filter) {
+export function loadAllPosts(filter) {
   fetch('/templates/card.html')
     .then(response => response.text())
     .then(html => {
       const template = Handlebars.compile(html);
       let i = 0;
+      let spinner = document.getElementById("spinner");
+      spinner.parentNode.removeChild(spinner);
       for (const [key, value] of Object.entries(blogs)) {
         if (i === 0) {
           value.header = true;
@@ -40,8 +42,4 @@ function loadPosts(filter) {
         i += 1;
       };
     });
-}
-
-window.onload = function() {
-  loadPosts();
 }

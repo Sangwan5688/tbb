@@ -6,6 +6,8 @@ function loadRecentPosts() {
     .then(response => response.text())
     .then(html => {
       const template = Handlebars.compile(html);
+      let spinner = document.getElementById("spinner");
+      spinner.parentNode.removeChild(spinner);
       for (let i = 0; i < Math.min(recentPosts.length, 11); i++) {
         if (i === 0) {
           blogs[recentPosts[i]].header = true;

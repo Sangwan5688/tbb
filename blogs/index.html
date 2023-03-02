@@ -10,7 +10,6 @@
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link href="/styles/bootstrap.min.css" rel="stylesheet">
   <link href="/styles/main.css" rel="stylesheet">
-  <script src="/scripts/body_loader.js"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9441129050034617" crossorigin="anonymous"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-24YWEQCQC1"></script>
@@ -32,17 +31,19 @@
 
   <script src="/scripts/bootstrap.min.js"></script>
   <script src="/scripts/handlebars-4.7.7.min.js"></script>
-  <script>
+  <script type="module">
+    import { loadBody } from '/scripts/body_loader.js';
+    
     let data = {
       title: 'Blogs',
       subtitle: 'A collection of all our blogs',
       image: '/assets/typewriter.webp',
       imageClass: 'two-third-size',
       altText: 'All Blogs',
+      loadAllBlogs: true,
     };
     loadBody(data);
   </script>
-  <script type="module" src="/scripts/all_blogs_loader.js"></script>
 </body>
 
 </html>
