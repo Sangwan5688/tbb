@@ -4,7 +4,7 @@ export const blogs = {
     subtitle: 'A Guide Without Jailbreaking',
     image: '/assets/iphone.webp',
     link: '/blogs/install_ipa_on_iphone',
-    related: [{ key: 'arm64_vs_armeabi' }],
+    related: [{ key: 'arm64_vs_armeabi' }, { key: 'how-to-check-phone-processor' }],
     tags: new Set(['mobile', 'ios', 'ipa', 'iphone', 'jailbreak', 'install', 'guide']),
     publish_date: '2023-02-24',
   },
@@ -13,7 +13,7 @@ export const blogs = {
     subtitle: 'Understanding Which App to Download for Your Device',
     image: '/assets/arch_version.webp',
     link: '/blogs/arm64_vs_armeabi',
-    related: [{ key: 'install_ipa_on_iphone' }],
+    related: [{ key: 'how-to-check-phone-processor' }, { key: 'install_ipa_on_iphone' }],
     tags: new Set(['mobile', 'android', 'arm64', 'armeabi', 'architecture']),
     publish_date: '2023-02-25',
   },
@@ -33,13 +33,16 @@ export const blogs = {
     link: '/blogs/how-to-download-torrent-to-google-drive',
     related: [],
     tags: new Set(['torrent', 'google drive', 'download', 'python', 'script', 'guide']),
-    publish_date: '2023-02-26',
+    publish_date: '2023-02-27',
   },
-  coming_soon: {
-    subtitle: 'Coming Soon',
-    image: '/assets/home_header_laptop.webp',
-    link: '#',
-    related: [],
+  'how-to-check-phone-processor': {
+    title: 'How to check Phone Processor',
+    subtitle: 'Check which processor your phone has',
+    image: '/assets/processor.webp',
+    link: '/blogs/how-to-check-phone-processor',
+    related: [{ key: 'arm64_vs_armeabi' }, { key: 'install_ipa_on_iphone' }],
+    tags: new Set(['mobile', 'android', 'arm64', 'armeabi', 'architecture', 'guide']),
+    publish_date: '2023-03-03',
   },
 };
 
@@ -48,5 +51,5 @@ export const recentPosts = [
   'arm64_vs_armeabi',
   'getting-started-with-flutter',
   'how-to-download-torrent-to-google-drive',
-  'coming_soon',
+  'how-to-check-phone-processor',
 ];
