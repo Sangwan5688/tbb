@@ -44,6 +44,15 @@ export const blogs = {
     tags: new Set(['mobile', 'android', 'arm64', 'armeabi', 'architecture', 'guide']),
     publish_date: '2023-03-03',
   },
+  'what-are-custom-roms': {
+    title: 'What are Custom ROMs',
+    subtitle: 'Understanding Custom ROMs',
+    image: '/assets/rom.webp',
+    link: '/blogs/what-are-custom-roms',
+    related: [{ key: 'arm64_vs_armeabi' }, { key: 'how-to-check-phone-processor' }, { key: 'install_ipa_on_iphone' }],
+    tags: new Set(['mobile', 'android', 'arm64', 'armeabi', 'architecture', 'guide']),
+    publish_date: '2023-03-06',
+  },
 };
 
 export const recentPosts = [
@@ -52,4 +61,5 @@ export const recentPosts = [
   'getting-started-with-flutter',
   'how-to-download-torrent-to-google-drive',
   'how-to-check-phone-processor',
+  'what-are-custom-roms',
 ];
