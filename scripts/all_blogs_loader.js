@@ -15,7 +15,7 @@ export function loadAllPosts(filter) {
         }
         if ((i === 5 || i === 7) && showAd) {
           // Will be used to load ad
-          const recentPosts = document.getElementById('posts-section');
+          const recentPosts = document.getElementById('all-posts-section');
           recentPosts.innerHTML += `<div class="col-lg-3 col-6 mb-4">
             <div class="card round-element text-center h-100">
               <div class="card-body">
@@ -36,7 +36,7 @@ export function loadAllPosts(filter) {
           const recentPostsSmall = document.getElementById('recent-posts-small');
           recentPostsSmall.innerHTML += `<div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-4">${compiledTemplate}</div>`;
         } else {
-          const recentPosts = document.getElementById('recent-posts-section');
+          const recentPosts = document.getElementById('all-posts-section');
           recentPosts.innerHTML += `<div class="col-lg-3 col-6 mb-4">${compiledTemplate}</div>`;
         }
         i += 1;
