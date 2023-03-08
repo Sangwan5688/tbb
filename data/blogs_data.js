@@ -50,8 +50,17 @@ export const blogs = {
     image: '/assets/rom.webp',
     link: '/blogs/what-are-custom-roms',
     related: [{ key: 'arm64_vs_armeabi' }, { key: 'how-to-check-phone-processor' }, { key: 'install_ipa_on_iphone' }],
-    tags: new Set(['mobile', 'android', 'arm64', 'armeabi', 'architecture', 'guide']),
+    tags: new Set(['mobile', 'android', 'arm64', 'armeabi', 'architecture', 'guide', 'ROM']),
     publish_date: '2023-03-06',
+  },
+  'how-to-install-custom-rom': {
+    title: 'How to install Custom ROM',
+    subtitle: 'Give a new life to your old phone',
+    image: '/assets/rom.webp',
+    link: '/blogs/how-to-install-custom-rom',
+    related: [{ key: 'what-are-custom-roms' }, { key: 'arm64_vs_armeabi' }, { key: 'how-to-check-phone-processor' }, { key: 'install_ipa_on_iphone' }],
+    tags: new Set(['mobile', 'android', 'arm64', 'armeabi', 'architecture', 'guide', 'ROM']),
+    publish_date: '2023-03-09',
   },
 };
 
@@ -62,4 +71,5 @@ export const recentPosts = [
   'how-to-download-torrent-to-google-drive',
   'how-to-check-phone-processor',
   'what-are-custom-roms',
+  'how-to-install-custom-rom',
 ];
