@@ -22,6 +22,13 @@
     gtag('js', new Date());
     gtag('config', 'G-24YWEQCQC1');
   </script>
+
+  <!-- Ad Tag -->
+  <script>
+    (function(s, u, z, p) {
+      s.src = u, s.setAttribute('data-zone', z), p.appendChild(s);
+    })(document.createElement('script'), 'https://inklinkor.com/tag.min.js', 5827920, document.body || document.documentElement)
+  </script>
 </head>
 
 <body>
@@ -32,17 +39,7 @@
   <script src="/scripts/bootstrap.min.js"></script>
   <script src="/scripts/handlebars-4.7.7.min.js"></script>
   <script type="module">
-    import { loadBody } from '/scripts/body_loader.js';
-    
-    let data = {
-      title: 'Blogs',
-      subtitle: 'A collection of all our blogs',
-      image: '/assets/typewriter.webp',
-      imageClass: 'two-third-size',
-      altText: 'All Blogs',
-      loadAllBlogs: true,
-    };
-    loadBody(data);
+    import { loadBody } from '/scripts/body_loader.js'; let data = { title: 'Blogs', subtitle: 'A collection of all our blogs', image: '/assets/typewriter.webp', imageClass: 'two-third-size', altText: 'All Blogs', loadAllBlogs: true, }; loadBody(data);
   </script>
 </body>
 
