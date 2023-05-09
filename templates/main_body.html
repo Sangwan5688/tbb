@@ -41,7 +41,7 @@
       <div class="row">
 
         <div class="col-md-6 col-sm-12 align-self-center px-4 py-3">
-          <h1 class="display-3">
+          <h1 class="title">
             {{title}}
           </h1>
           <p class="lead subtitle">
@@ -52,7 +52,7 @@
         <div class="col align-self-center">
           {{#if skipBlend}}
           <img class="img-fluid avatar {{imageClass}}" src="{{image}}" alt="{{altText}}"> {{else}}
-          <img class="img-fluid blend-bottom {{imageClass}}" src="{{image}}" alt="{{altText}}"> {{/if}}
+          <img class="img-fluid blend-bottom img-head {{imageClass}}" src="{{image}}" alt="{{altText}}"> {{/if}}
         </div>
 
       </div>
@@ -75,11 +75,11 @@
   </div>
 
   <footer class="footer-section">
-    <div class="container text-white text-center p-3">
+    <div class="container text-white text-center p-3 pb-2">
       <small class="m-2">Made with &hearts; by Ankit Sangwan</small>
     </div>
     <div class="container text-white text-center pb-3">
-      <small class="m-2"><a href="/privacy_policy">Privacy Policy</a></small>
+      <small class="m-2"><a class="secondary no-decor" href="/privacy_policy">Privacy Policy</a></small>
     </div>
   </footer>
 </div>
