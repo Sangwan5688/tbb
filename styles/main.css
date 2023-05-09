@@ -89,7 +89,6 @@ ul:not(.navbar-nav)>li::before {
 }
 
 .black {
-  color: #000000!important;
   background-color: #000000!important;
 }
 
