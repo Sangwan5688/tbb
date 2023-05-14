@@ -1,3 +1,7 @@
+body {
+  background-color: #000000!important;
+}
+
 a {
   color: #fff;
   font-weight: 700;
@@ -90,6 +94,10 @@ ul:not(.navbar-nav)>li::before {
 
 .black {
   background-color: #000000!important;
+}
+
+.white {
+  background-color: #fff!important;
 }
 
 .round-element {
