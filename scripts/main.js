@@ -1,5 +1,4 @@
 import { blogs, recentPosts } from "/data/blogs_data.js";
-import { showAd } from "/constants/constants.js";
 
 function loadRecentPosts() {
   fetch('/templates/card.html')
@@ -8,22 +7,9 @@ function loadRecentPosts() {
       const template = Handlebars.compile(html);
       let spinner = document.getElementById("spinner");
       spinner.parentNode.removeChild(spinner);
-      for (let i = 0; i < Math.min(recentPosts.length, 11); i++) {
+      for (let i = 0; i < Math.min(recentPosts.length, 8); i++) {
         if (i === 0) {
           blogs[recentPosts[i]].header = true;
-        }
-        if ((i === 5 || i === 7) && showAd) {
-          // Will be used to load ad
-          const recentPosts = document.getElementById('recent-posts-section');
-          recentPosts.innerHTML += `<div class="col-lg-3 col-6 mb-4">
-            <div class="card round-element text-center h-100">
-              <div class="card-body text-white ">
-                <!-- Ezoic - related_blogs_section - mid_content -->
-                <div id="ezoic-pub-ad-placeholder-104"> </div>
-                <!-- End Ezoic - related_blogs_section - mid_content -->
-              </div>
-            </div>
-          </div>`;
         }
         const compiledTemplate = template(blogs[recentPosts[i]]);
         if (i === 0) {
@@ -33,8 +19,9 @@ function loadRecentPosts() {
           const recentPostsSmall = document.getElementById('recent-posts-small');
           recentPostsSmall.innerHTML += `<div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-4">${compiledTemplate}</div>`;
         } else {
-          const recentPosts = document.getElementById('recent-posts-section');
-          recentPosts.innerHTML += `<div class="col-lg-3 col-6 mb-4">${compiledTemplate}</div>`;
+          const id = (i === 5) ? 'recent-blog-7' : 'recent-blog-9';
+          const recentPosts = document.getElementById(id);
+          recentPosts.innerHTML += `${compiledTemplate}`;
         }
       };
     });
