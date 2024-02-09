@@ -19,9 +19,7 @@ export function loadAllPosts(filter) {
           recentPosts.innerHTML += `<div class="col-lg-3 col-6 mb-4">
             <div class="card round-element text-center h-100">
               <div class="card-body">
-                <!-- Ezoic - related_blogs_section - mid_content -->
-                <div id="ezoic-pub-ad-placeholder-104"> </div>
-                <!-- End Ezoic - related_blogs_section - mid_content -->
+                <!-- adblock -->
               </div>
             </div>
           </div>`;
