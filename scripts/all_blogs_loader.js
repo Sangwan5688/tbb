@@ -20,6 +20,18 @@ export function loadAllPosts(filter) {
             <div class="card round-element text-center h-100">
               <div class="card-body">
                 <!-- adblock -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9441129050034617"
+                    crossorigin="anonymous"></script>
+                <!-- Posts List Ad - TBB -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-9441129050034617"
+                    data-ad-slot="8733852590"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
               </div>
             </div>
           </div>`;
